@@ -18,4 +18,9 @@ public class Item {
                 + "\n"
                 ;
     }
+
+//adding for TDD
+    public int getPrice() {
+        return price;
+    }
 }

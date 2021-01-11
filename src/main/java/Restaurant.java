@@ -62,4 +62,13 @@ public class Restaurant {
         return name;
     }
 
+    // Order Value Calculation code for TDD
+    public int orderValue (List<Item> selectedItem) {
+        int orderValue=0;
+        for(Item item: selectedItem) {
+            orderValue += findItemByName(item.getName()).getPrice();
+        }
+        return orderValue;
+    }
+
 }

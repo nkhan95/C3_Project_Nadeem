@@ -35,7 +35,7 @@ class RestaurantTest {
     @Test
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time(){
         //Please set the opening time to be latter than current time and closing time to before the current time.
-        LocalTime newOpeningTime = LocalTime.parse("15:00:00");
+        LocalTime newOpeningTime = LocalTime.parse("23:00:00");
         LocalTime newClosingTime = LocalTime.parse("23:59:00");
         restaurant.openingTime = newOpeningTime;
         restaurant.closingTime = newClosingTime;
