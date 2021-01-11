@@ -66,4 +66,17 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    //<<<<<<<<<<<<<<<<<<<<TDD FAILING USE CASE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //1. user select the item in menu.
+    //2. the value of order is calculated and returned as integer.
+
+    @Test
+    public void when_selecting_items_in_menu_total_value_of_order_should_be_returned(){
+        int orderValue = 0;
+        orderValue = restaurant.orderValue(restaurant.getMenu());
+        assertEquals(388,orderValue);
+
+    }
 }
